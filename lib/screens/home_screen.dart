@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:week_3_lab/widgets/buttons/app_small_text_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -18,7 +19,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             Text(
               "Hello, World!",
-              style: TextStyle(fontStyle: FontStyle.normal, fontSize: 28),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
             ),
             SizedBox(height: 8),
             Text(
@@ -26,16 +27,14 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(color: Colors.grey, fontSize: 20),
             ),
             SizedBox(height: 24),
-            ElevatedButton(
+            AppSmallTextButton(
+              text: 'Go to Login',
+              width: 150,
               onPressed: () {
                 Navigator.pushNamed(context, "/login");
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                foregroundColor: Colors.white,
-                padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-              ),
-              child: Text("Go to Login"),
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
             ),
           ],
         ),

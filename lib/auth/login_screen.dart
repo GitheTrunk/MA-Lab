@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:week_3_lab/widgets/buttons/app_text_button.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -40,21 +41,11 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 24),
-            ElevatedButton(
+            AppTextButton(
+              text: "Login",
+              backgroundColor: Colors.purple,
+              foregroundColor: Colors.white,
               onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.purple,
-                foregroundColor: Colors.white,
-                padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-              ),
-              child: Text("Login"),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: Text(
-                "Forgot Password?",
-                style: TextStyle(color: Colors.purple),
-              ),
             ),
           ],
         ),
