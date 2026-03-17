@@ -8,9 +8,9 @@ class AppTextButton extends StatelessWidget {
   const AppTextButton({
     super.key,
     required this.text,
-    required this.onPressed,
-    required this.backgroundColor,
-    required this.foregroundColor,
+    this.onPressed,
+    this.backgroundColor,
+    this.foregroundColor,
   });
 
   @override

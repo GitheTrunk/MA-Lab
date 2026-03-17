@@ -25,7 +25,9 @@ class LoginScreen extends StatelessWidget {
               textAlignVertical: TextAlignVertical.center,
               decoration: InputDecoration(
                 label: Text("Email"),
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
                 prefixIcon: Icon(Icons.email),
               ),
             ),
@@ -36,7 +38,9 @@ class LoginScreen extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 label: Text("Password"),
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
                 prefixIcon: Icon(Icons.lock),
               ),
             ),

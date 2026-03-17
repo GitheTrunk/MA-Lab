@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:week_3_lab/widgets/buttons/app_small_text_button.dart';
+import 'package:week_3_lab/widgets/menu/app_menu_item.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,6 +13,27 @@ class HomeScreen extends StatelessWidget {
         foregroundColor: Colors.white,
         title: const Text("My First App"),
         centerTitle: false,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(32.0),
+              child: Image.asset(
+                "assets/images/logo_gic.png",
+                fit: BoxFit.cover,
+              ),
+            ),
+            AppMenuItem(
+              title: 'Auth',
+              icon: Icons.lock,
+              subMenu: [
+                AppMenuItem(title: 'Login', route: '/login'),
+                AppMenuItem(title: 'Sign Up', route: '/signup'),
+              ],
+            ),
+          ],
+        ),
       ),
       body: Center(
         child: Column(

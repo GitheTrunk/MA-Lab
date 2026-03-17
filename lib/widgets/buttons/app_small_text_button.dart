@@ -9,10 +9,10 @@ class AppSmallTextButton extends StatelessWidget {
   const AppSmallTextButton({
     super.key,
     required this.text,
-    required this.onPressed,
-    required this.width,
-    required this.backgroundColor,
-    required this.foregroundColor,
+    this.onPressed,
+    this.width,
+    this.backgroundColor,
+    this.foregroundColor,
   });
 
   @override

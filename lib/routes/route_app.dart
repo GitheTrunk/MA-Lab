@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:week_3_lab/auth/signup_screen.dart';
 import 'package:week_3_lab/screens/home_screen.dart';
 import 'package:week_3_lab/auth/login_screen.dart';
 
@@ -13,6 +14,7 @@ class RouteApp extends StatelessWidget {
       routes: {
         "/": (context) => const HomeScreen(),
         "/login": (context) => const LoginScreen(),
+        "/signup": (context) => const SignupScreen(),
       },
       onGenerateRoute: (settings) {
         switch (settings.name) {
@@ -24,6 +26,11 @@ class RouteApp extends StatelessWidget {
           case "/login":
             return MaterialPageRoute(
               builder: (context) => const LoginScreen(),
+              settings: settings,
+            );
+          case "/signup":
+            return MaterialPageRoute(
+              builder: (context) => const SignupScreen(),
               settings: settings,
             );
           default:
