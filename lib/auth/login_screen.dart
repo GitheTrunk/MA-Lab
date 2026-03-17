@@ -47,6 +47,17 @@ class LoginScreen extends StatelessWidget {
               foregroundColor: Colors.white,
               onPressed: () {},
             ),
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                "Forgot Password?",
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.purple,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
           ],
         ),
       ),
