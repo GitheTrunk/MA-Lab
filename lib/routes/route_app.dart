@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:week_3_lab/auth/signup_screen.dart';
 import 'package:week_3_lab/screens/home_screen.dart';
 import 'package:week_3_lab/auth/login_screen.dart';
+import 'package:week_3_lab/splash/welcome_screen.dart';
 
 class RouteApp extends StatelessWidget {
   const RouteApp({super.key});
@@ -10,9 +11,10 @@ class RouteApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: "/",
+      initialRoute: "/welcome",
       routes: {
         "/": (context) => const HomeScreen(),
+        "/welcome": (context) => const WelcomeScreen(),
         "/login": (context) => const LoginScreen(),
         "/signup": (context) => const SignupScreen(),
       },
@@ -31,6 +33,11 @@ class RouteApp extends StatelessWidget {
           case "/signup":
             return MaterialPageRoute(
               builder: (context) => const SignupScreen(),
+              settings: settings,
+            );
+          case "/welcome":
+            return MaterialPageRoute(
+              builder: (context) => const WelcomeScreen(),
               settings: settings,
             );
           default:
