@@ -3,6 +3,7 @@ import 'package:week_3_lab/auth/signup_screen.dart';
 import 'package:week_3_lab/screens/home_screen.dart';
 import 'package:week_3_lab/auth/login_screen.dart';
 import 'package:week_3_lab/splash/welcome_screen.dart';
+import 'package:week_3_lab/screens/counter_screen.dart';
 
 class RouteApp extends StatelessWidget {
   const RouteApp({super.key});
@@ -17,6 +18,7 @@ class RouteApp extends StatelessWidget {
         "/welcome": (context) => const WelcomeScreen(),
         "/login": (context) => const LoginScreen(),
         "/signup": (context) => const SignupScreen(),
+        "/counter": (context) => const CounterScreen(),
       },
       onGenerateRoute: (settings) {
         switch (settings.name) {
@@ -38,6 +40,11 @@ class RouteApp extends StatelessWidget {
           case "/welcome":
             return MaterialPageRoute(
               builder: (context) => const WelcomeScreen(),
+              settings: settings,
+            );
+          case "/counter":
+            return MaterialPageRoute(
+              builder: (context) => const CounterScreen(),
               settings: settings,
             );
           default:

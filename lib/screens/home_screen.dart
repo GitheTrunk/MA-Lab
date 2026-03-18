@@ -32,6 +32,11 @@ class HomeScreen extends StatelessWidget {
                 AppMenuItem(title: 'Sign Up', route: '/signup'),
               ],
             ),
+            AppMenuItem(
+              title: 'Counter Screen',
+              route: '/counter',
+              icon: Icons.numbers,
+            ),
           ],
         ),
       ),
