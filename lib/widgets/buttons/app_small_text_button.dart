@@ -6,6 +6,7 @@ class AppSmallTextButton extends StatelessWidget {
   final double? width;
   final Color? backgroundColor;
   final Color? foregroundColor;
+  final Color? borderColor;
   const AppSmallTextButton({
     super.key,
     required this.text,
@@ -13,6 +14,7 @@ class AppSmallTextButton extends StatelessWidget {
     this.width,
     this.backgroundColor,
     this.foregroundColor,
+    this.borderColor,
   });
 
   @override
@@ -27,6 +29,10 @@ class AppSmallTextButton extends StatelessWidget {
           foregroundColor: foregroundColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadiusGeometry.circular(8),
+            side: BorderSide(
+              color: borderColor ?? Colors.transparent,
+              width: 1,
+            ),
           ),
         ),
         child: Text(

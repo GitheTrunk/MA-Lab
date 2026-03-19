@@ -37,6 +37,11 @@ class HomeScreen extends StatelessWidget {
               route: '/counter',
               icon: Icons.numbers,
             ),
+            AppMenuItem(
+              title: 'Profile Screen',
+              route: '/profile',
+              icon: Icons.person,
+            ),
           ],
         ),
       ),
