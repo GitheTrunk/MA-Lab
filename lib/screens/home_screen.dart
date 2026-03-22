@@ -25,6 +25,11 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             AppMenuItem(
+              title: 'Dashboard',
+              route: '/dashboard',
+              icon: Icons.dashboard,
+            ),
+            AppMenuItem(
               title: 'Auth',
               icon: Icons.lock,
               subMenu: [
@@ -41,6 +46,11 @@ class HomeScreen extends StatelessWidget {
               title: 'Profile Screen',
               route: '/profile',
               icon: Icons.person,
+            ),
+            AppMenuItem(
+              title: 'Product Screen',
+              route: '/product',
+              icon: Icons.shopping_bag,
             ),
           ],
         ),

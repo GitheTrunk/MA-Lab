@@ -5,19 +5,23 @@ class AppTextButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final Color? backgroundColor;
   final Color? foregroundColor;
+  final bool isFullWidth;
+  final double height;
   const AppTextButton({
     super.key,
     required this.text,
     this.onPressed,
     this.backgroundColor,
     this.foregroundColor,
+    this.isFullWidth = false,
+    this.height = 48,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 56,
-      width: double.infinity,
+      height: height,
+      width: isFullWidth ? double.infinity : null,
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
@@ -30,7 +34,10 @@ class AppTextButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: height * 0.35,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );

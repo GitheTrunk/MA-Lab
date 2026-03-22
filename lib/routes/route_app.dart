@@ -5,6 +5,8 @@ import 'package:week_3_lab/auth/login_screen.dart';
 import 'package:week_3_lab/splash/welcome_screen.dart';
 import 'package:week_3_lab/screens/counter_screen.dart';
 import 'package:week_3_lab/screens/profile_screen.dart';
+import 'package:week_3_lab/screens/product_screen.dart';
+import 'package:week_3_lab/screens/dashboard_screen.dart';
 
 class RouteApp extends StatelessWidget {
   const RouteApp({super.key});
@@ -21,6 +23,8 @@ class RouteApp extends StatelessWidget {
         "/signup": (context) => const SignupScreen(),
         "/counter": (context) => const CounterScreen(),
         "/profile": (context) => const ProfileScreen(),
+        "/product": (context) => const ProductScreen(),
+        "/dashboard": (context) => const DashboardScreen(),
       },
       onGenerateRoute: (settings) {
         switch (settings.name) {
@@ -54,6 +58,17 @@ class RouteApp extends StatelessWidget {
               builder: (context) => const ProfileScreen(),
               settings: settings,
             );
+          case "/product":
+            return MaterialPageRoute(
+              builder: (context) => const ProductScreen(),
+              settings: settings,
+            );
+          case "/dashboard":
+            return MaterialPageRoute(
+              builder: (context) => const DashboardScreen(),
+              settings: settings,
+            );
+
           default:
             return null;
         }

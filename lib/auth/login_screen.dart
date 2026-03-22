@@ -50,6 +50,8 @@ class LoginScreen extends StatelessWidget {
               backgroundColor: Colors.purple,
               foregroundColor: Colors.white,
               onPressed: () {},
+              isFullWidth: true,
+              height: 56,
             ),
             TextButton(
               onPressed: () {},
