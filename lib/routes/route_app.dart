@@ -7,6 +7,7 @@ import 'package:week_3_lab/screens/counter_screen.dart';
 import 'package:week_3_lab/screens/profile_screen.dart';
 import 'package:week_3_lab/screens/product_screen.dart';
 import 'package:week_3_lab/screens/dashboard_screen.dart';
+import 'package:week_3_lab/screens/social_profile_screen.dart';
 
 class RouteApp extends StatelessWidget {
   const RouteApp({super.key});
@@ -25,6 +26,7 @@ class RouteApp extends StatelessWidget {
         "/profile": (context) => const ProfileScreen(),
         "/product": (context) => const ProductScreen(),
         "/dashboard": (context) => const DashboardScreen(),
+        "/social": (context) => const SocialProfileScreen(),
       },
       onGenerateRoute: (settings) {
         switch (settings.name) {
@@ -68,7 +70,11 @@ class RouteApp extends StatelessWidget {
               builder: (context) => const DashboardScreen(),
               settings: settings,
             );
-
+          case "/social":
+            return MaterialPageRoute(
+              builder: (context) => const SocialProfileScreen(),
+              settings: settings,
+            );
           default:
             return null;
         }
