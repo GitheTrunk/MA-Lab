@@ -48,6 +48,7 @@ class HomeScreen extends StatelessWidget {
               subMenu: [
                 AppMenuItem(title: 'Profile', route: '/profile'),
                 AppMenuItem(title: 'Social Profile', route: '/social'),
+                AppMenuItem(title: 'Contact', route: '/contact'),
               ],
             ),
             AppMenuItem(
