@@ -56,6 +56,11 @@ class HomeScreen extends StatelessWidget {
               route: '/product',
               icon: Icons.shopping_bag,
             ),
+            AppMenuItem(
+              title: 'Team Screen',
+              route: '/team',
+              icon: Icons.group,
+            ),
           ],
         ),
       ),
