@@ -26,8 +26,11 @@ class HomeScreen extends StatelessWidget {
             ),
             AppMenuItem(
               title: 'Dashboard',
-              route: '/dashboard',
               icon: Icons.dashboard,
+              subMenu: [
+                AppMenuItem(title: 'School', route: '/dashboard'),
+                AppMenuItem(title: 'Fitness', route: '/fitness'),
+              ],
             ),
             AppMenuItem(
               title: 'Auth',
