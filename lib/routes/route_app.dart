@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:week_3_lab/auth/signup_screen.dart';
 import 'package:week_3_lab/screens/home_screen.dart';
 import 'package:week_3_lab/auth/login_screen.dart';
+import 'package:week_3_lab/screens/weather_screen.dart';
 import 'package:week_3_lab/splash/welcome_screen.dart';
 import 'package:week_3_lab/screens/counter_screen.dart';
 import 'package:week_3_lab/screens/profile_screen.dart';
@@ -33,6 +34,7 @@ class RouteApp extends StatelessWidget {
         "/contact": (context) => const ContactScreen(),
         "/team": (context) => const TeamScreen(),
         "/fitness": (context) => const FitnessScreen(),
+        "/weather": (context) => const WeatherScreen(),
       },
       onGenerateRoute: (settings) {
         switch (settings.name) {
@@ -94,6 +96,11 @@ class RouteApp extends StatelessWidget {
           case "/fitness":
             return MaterialPageRoute(
               builder: (context) => const FitnessScreen(),
+              settings: settings,
+            );
+          case "/weather":
+            return MaterialPageRoute(
+              builder: (context) => const WeatherScreen(),
               settings: settings,
             );
           default:
