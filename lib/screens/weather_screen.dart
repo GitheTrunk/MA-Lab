@@ -8,6 +8,13 @@ class WeatherScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xFF4FACFE),
+        foregroundColor: Color(0xFF00F2FE),
+        elevation: 0,
+        title: const Text("Weather"),
+        centerTitle: true,
+      ),
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(

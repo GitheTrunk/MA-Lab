@@ -61,6 +61,14 @@ class HomeScreen extends StatelessWidget {
               icon: Icons.shopping_bag,
             ),
             AppMenuItem(
+              title: 'Finance',
+              icon: Icons.account_balance,
+              subMenu: [
+                AppMenuItem(title: 'Wallet', route: '/finance'),
+                AppMenuItem(title: 'Analytics', route: '/analytics'),
+              ],
+            ),
+            AppMenuItem(
               title: 'Team Screen',
               route: '/team',
               icon: Icons.group,

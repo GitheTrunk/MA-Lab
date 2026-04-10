@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:week_3_lab/screens/analytic_screen.dart';
 import 'package:week_3_lab/auth/signup_screen.dart';
 import 'package:week_3_lab/screens/home_screen.dart';
 import 'package:week_3_lab/auth/login_screen.dart';
@@ -12,6 +13,7 @@ import 'package:week_3_lab/screens/social_profile_screen.dart';
 import 'package:week_3_lab/screens/contact_screen.dart';
 import 'package:week_3_lab/screens/team_screen.dart';
 import 'package:week_3_lab/screens/fitness_screen.dart';
+import 'package:week_3_lab/screens/finance_screen.dart';
 
 class RouteApp extends StatelessWidget {
   const RouteApp({super.key});
@@ -35,6 +37,8 @@ class RouteApp extends StatelessWidget {
         "/team": (context) => const TeamScreen(),
         "/fitness": (context) => const FitnessScreen(),
         "/weather": (context) => const WeatherScreen(),
+        "/finance": (context) => const FinanceScreen(),
+        "/analytics": (context) => const AnalyticScreen(),
       },
       onGenerateRoute: (settings) {
         switch (settings.name) {
@@ -101,6 +105,16 @@ class RouteApp extends StatelessWidget {
           case "/weather":
             return MaterialPageRoute(
               builder: (context) => const WeatherScreen(),
+              settings: settings,
+            );
+          case "/finance":
+            return MaterialPageRoute(
+              builder: (context) => const FinanceScreen(),
+              settings: settings,
+            );
+          case "/analytics":
+            return MaterialPageRoute(
+              builder: (context) => const AnalyticScreen(),
               settings: settings,
             );
           default:
